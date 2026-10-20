@@ -1,13 +1,20 @@
 {
   "expo": {
-    "name": "iptv-app",
-    "slug": "iptv-app",
+    "name": "IPTV Player",
+    "slug": "iptv-player",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.iptvplayer",
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true,
+          "NSAllowsLocalNetworking": true
+        }
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -16,10 +23,32 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": true,
+      "package": "com.example.iptvplayer"
     },
     "web": {
+      "bundler": "metro",
+      "output": "single",
       "favicon": "./assets/favicon.png"
+    },
+    "scheme": "iptvplayer",
+    "newArchEnabled": true,
+    "plugins": [
+      "expo-router",
+      "expo-video",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          },
+          "ios": {}
+        }
+      ],
+      "./plugins/withAndroidTV"
+    ],
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }

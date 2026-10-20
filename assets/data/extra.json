@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Sun TV HD",
+    "url": "https://d2px1d6ssc60fw.cloudfront.net/SunTV/SunTV-HDR10-IN-index.m3u8",
+    "country": "IN",
+    "quality": 1080,
+    "group": "Entertainment",
+    "logo": "https://dtil.tmsimg.com/assets/GNLZZGG002Z0M0Y.png?lock=720x540",
+    "lang": ["ta"]
+  }
+]
